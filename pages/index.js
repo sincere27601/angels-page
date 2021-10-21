@@ -25,7 +25,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           Powered by{' '}
-           A.E Signings LLC 
+           A.E Signings 
         </a>
       </footer>
     </div>
