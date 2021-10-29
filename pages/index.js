@@ -14,7 +14,7 @@ export default function Home() {
         <h1 className="text-6xl font-bold">
           Welcome to{' '}
           <a className="text-purple-600" href="https://nextjs.org">
-            A.E. Notary Signings 
+            A.R. Notary Signings 
             <p className="text-yellow-300">COMING SOON </p>
           </a>
         </h1>
