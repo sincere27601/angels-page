@@ -28,7 +28,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           Powered by{' '}
-           A.E Notary Signings 
+           A.R. Notary Signings 
         </a>
       </footer>
     </div>
