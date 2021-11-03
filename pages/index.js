@@ -3,7 +3,7 @@ import React from 'react';
  
  const Basic = () => (
    <div>
-     <h1 class= "bg-green-600" >A. R. Notary Signing</h1>
+     <h1 class= "bg-green-600 text-center">A. R. Notary Signing</h1>
      <Formik
        initialValues={{ email: '', password: '' }}
        validate={values => {
