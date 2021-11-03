@@ -25,6 +25,7 @@ import React from 'react';
        }}
      >
        {({ isSubmitting }) => (
+         <div>
          <Form class= "text-center">
            <Field type="email" name="email" />
            <ErrorMessage name="email" component="div" />
@@ -34,6 +35,7 @@ import React from 'react';
              Submit
            </button>
          </Form>
+         </div>
        )}
      </Formik>
    </div>
