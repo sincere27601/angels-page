@@ -2,8 +2,8 @@ import React from 'react';
  import { Formik, Form, Field, ErrorMessage } from 'formik';
  
  const Basic = () => (
-   <div>
-     <h1 class= "bg-green-600 text-center">A. R. Notary Signing</h1>
+   <div class="text-center">
+     <h1 class= "text-green-600 ">A. R. Notary Signing</h1>
      <Formik
        initialValues={{ email: '', password: '' }}
        validate={values => {
