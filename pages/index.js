@@ -1,36 +1,42 @@
-import Head from 'next/head';
-
-
-export default function Home() {
-  return (
-
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <Head>
-        <title>A.E. Signings</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-    
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-purple-600" href="https://nextjs.org">
-            A.R. Notary Signings 
-            <p className="text-yellow-300">COMING SOON </p>
-          </a>
-        </h1>
-      </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-           A.R. Notary Signings 
-        </a>
-      </footer>
-    </div>
-  )
-}
+import React from 'react';
+ import { Formik, Form, Field, ErrorMessage } from 'formik';
+ 
+ const Basic = () => (
+   <div>
+     <h1 class= "bg-blue-600" >Any place in your app!</h1>
+     <Formik
+       initialValues={{ email: '', password: '' }}
+       validate={values => {
+         const errors = {};
+         if (!values.email) {
+           errors.email = 'Required';
+         } else if (
+           !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+         ) {
+           errors.email = 'Invalid email address';
+         }
+         return errors;
+       }}
+       onSubmit={(values, { setSubmitting }) => {
+         setTimeout(() => {
+           alert(JSON.stringify(values, null, 2));
+           setSubmitting(false);
+         }, 400);
+       }}
+     >
+       {({ isSubmitting }) => (
+         <Form>
+           <Field type="email" name="email" />
+           <ErrorMessage name="email" component="div" />
+           <Field type="password" name="password" />
+           <ErrorMessage name="password" component="div" />
+           <button type="submit" disabled={isSubmitting}>
+             Submit
+           </button>
+         </Form>
+       )}
+     </Formik>
+   </div>
+ );
+ 
+ export default Basic;
